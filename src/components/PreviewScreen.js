@@ -10,7 +10,8 @@ class PreviewScreen extends Component {
 
   constructor(props) {
     super(props);
-      this.state = { modalVisible: false, };
+    this.state = { modalVisible: false };
+    this.state = { selectedRecipe: 0 };
     // this.renderItem = this.renderItem.bind(this);
   }
 
@@ -20,14 +21,15 @@ class PreviewScreen extends Component {
 
   state = {
     modalVisible: false,
+    selectedRecipe: 1,
   };
- 
+  
   setModalVisible(visible) {
     this.setState({modalVisible: visible});
   }
 
   componentWillReceiveProps( newProps ){
-      // this.setState( {modalVisible : newProps.visible});
+      this.setState( {modalVisible : false });
   }
 
   render() {
@@ -39,8 +41,8 @@ class PreviewScreen extends Component {
       );
     } else {          
       //alert( this.props.data[1].title );
-			var item = this.props.data[1];
-			let pic1 = item.pic;
+			var item = this.props.data[this.state.selectedRecipe];
+			var pic1 = item.pic;
  
       return (
         <View style={{marginTop: 22}}>
@@ -67,9 +69,10 @@ class PreviewScreen extends Component {
                 <DetailScreen recipe={item}/>
               </View>
               <View>
-                <Button title = "Next"
+                <Button title = "Lemme Try Something Else"
                 onPress={() => {
-                this.setModalVisible(!this.state.modalVisible);
+                  //this.state.selectedRecipe = 2;
+                  this.setState({ selectedRecipe: getRandomInt(this.props.data.length )});
                 }}
               />
               </View>
@@ -124,3 +127,7 @@ const styles = StyleSheet.create({
       fontSize: 14,
   }
 });
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
