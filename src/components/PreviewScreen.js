@@ -18,10 +18,10 @@ class PreviewScreen extends Component {
     this.props.getData(); //call our action
   }
 
-  /* state = {
+  state = {
     modalVisible: false,
   };
- */
+ 
   setModalVisible(visible) {
     this.setState({modalVisible: visible});
   }
@@ -41,8 +41,7 @@ class PreviewScreen extends Component {
       //alert( this.props.data[1].title );
 			var item = this.props.data[1];
 			let pic1 = item.pic;
-
-
+ 
       return (
         <View style={{marginTop: 22}}>
           <Button title = "What's For Dinner?"
@@ -65,7 +64,7 @@ class PreviewScreen extends Component {
                     {item.title}          
                 </Text>
                 <Image source = {{uri: pic1}} style={{width: 400, height: 400}}/>
-                <DetailScreen/>
+                <DetailScreen recipe={item}/>
               </View>
               <View>
                 <Button title = "Next"

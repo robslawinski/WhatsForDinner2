@@ -4,7 +4,12 @@ import {StyleSheet,  FlatList,Modal, Text, TouchableHighlight, View, Button,Imag
 
 class DetailScreen extends Component {
   state = {
-    modalVisible: false,
+    modalVisible: false
+    // recipe:
+    // {
+    //     title: "Chicken Parmigiana",
+    //     pic: "https://www.gourmandize.com/media/10037_crop.jpg/tsp/chicken-parmigiana.jpg"
+    // },
   };
 
   setModalVisible(visible) {
@@ -12,7 +17,8 @@ class DetailScreen extends Component {
   }
 
   componentWillReceiveProps( newProps ){
-      this.setState( {modalVisible : newProps.visible});
+ //     this.setState( {modalVisible : newProps.visible});
+    this.setState( {recipe : newProps.recipe});
   }
   
   render() {
@@ -37,8 +43,7 @@ class DetailScreen extends Component {
           }}>
           <View style={{marginTop: 22}}>
             <View>
-
-              
+              <Text>{this.props.recipe.title}</Text>
               <Button title = "Can I Have Seconds?"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);

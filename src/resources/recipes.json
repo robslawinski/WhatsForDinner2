@@ -3,15 +3,21 @@
   "recipes": [
     {
       "title": "Chicken Parmigiana",
-      "pic": "https://www.gourmandize.com/media/10037_crop.jpg/tsp/chicken-parmigiana.jpg"
+      "pic": "https://www.gourmandize.com/media/10037_crop.jpg/tsp/chicken-parmigiana.jpg",
+      "ingredients": [],
+      "directions": ""
     },
     {
       "title": "The Perfect Hamburger",
-      "pic": "http://worldstallestchef.com/wp-content/uploads/2010/05/burger.jpg"
+      "pic": "http://worldstallestchef.com/wp-content/uploads/2010/05/burger.jpg",
+      "ingredients": ["1 large egg, lightly beaten","2 tablespoons chili sauce", "1 teaspoon dried minced onion", "1 teaspoon prepared horseradish", "1 teaspoon Worcestershire sauce", "1/2 teaspoon salt", "Dash pepper", "1 pound lean ground beef (90% lean)", "4 hamburger buns, split", "Sliced tomato, Onion, Pickles and condiments, optional"],
+      "directions": "1)In a large bowl, combine egg and seasonings. Crumble beef over mixture and mix well. Shape into four 3/4-in.-thick patties. 2) Grill, covered, on a greased grill rack over medium heat or broil 4 in. from the heat for 5-7 minutes on each side or until a thermometer reads 160° and juices run clear. Serve on buns, with toppings as desired. Yield: 4 servings."
     },
     {
       "title": "Prime Rib",
-      "pic": "http://www.windsorstar.com/news/cms/binary/6074586.jpg?size=640x420"
+      "pic": "http://www.windsorstar.com/news/cms/binary/6074586.jpg?size=640x420",
+      "ingredients": [],
+      "directions": ""
     }
   ]
 }
