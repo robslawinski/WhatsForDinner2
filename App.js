@@ -1,26 +1,26 @@
+'use strict';
+
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { Provider } from 'react-redux';
 
+
+
+import HomeScreen from './src/components/HomeScreen';
 import PreviewScreen from './src/components/PreviewScreen';
 import DetailScreen from './src/components/DetailScreen';
+import store from './src/store'; //Import the store
+
 export default class App extends React.Component {
   render() {
     return (
-
-      <View style={styles.container}>
-      <PreviewScreen/>
-      </View>
+      <Provider store={store}>
+        <HomeScreen />
+      </Provider>
     );
   }
 }
 
-
-/*
-const App = StackNavigator({
-  Home: { screen: HomeScreen },
-  Profile: { screen: ProfileScreen },
-});
-*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,18 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-/*
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-      </View>
-    );
-  }
-}
-*/
 
 
 
