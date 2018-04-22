@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View, Button} from 'react-native';
+import {StyleSheet,  FlatList,Modal, Text, TouchableHighlight, View, Button,Image, ActivityIndicator,AppRegistry} from 'react-native';
+
 
 class DetailScreen extends Component {
   state = {
@@ -13,11 +14,14 @@ class DetailScreen extends Component {
   componentWillReceiveProps( newProps ){
       this.setState( {modalVisible : newProps.visible});
   }
-
+  
   render() {
+    
+    //var item = this.props.data[1];
+    //let pic1 = item.pic;
     return (
       <View style={{marginTop: 22}}>
-        <Button title = "t4ed"
+        <Button title = "Food"
            onPress={() => {
              this.setModalVisible(!this.state.modalVisible);
             }}
@@ -34,23 +38,17 @@ class DetailScreen extends Component {
           <View style={{marginTop: 22}}>
             <View>
 
-              <Text>Hello World!</Text>
-              <TouchableHighlight
+              
+              <Button title = "Can I Have Seconds?"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
                 <Text>Hide Modal</Text>
-              </TouchableHighlight>
+              </Button>
             </View>
           </View>
         </Modal>
 
-        <TouchableHighlight
-          onPress={() => {
-            this.setModalVisible(true);
-          }}>
-          <Text>Show Modal</Text>
-        </TouchableHighlight>
       </View>
     );
   }

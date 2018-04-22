@@ -1,0 +1,16 @@
+{
+  "recipes": [
+    {
+      "title": "Chicken Parmigiana",
+      "pic": "https://www.gourmandize.com/media/10037_crop.jpg/tsp/chicken-parmigiana.jpg"
+    },
+    {
+      "title": "The Perfect Hamburger",
+      "pic": "http://worldstallestchef.com/wp-content/uploads/2010/05/burger.jpg"
+    },
+    {
+      "title": "Prime Rib",
+      "pic": "http://www.windsorstar.com/news/cms/binary/6074586.jpg?size=640x420"
+    }
+  ]
+}
