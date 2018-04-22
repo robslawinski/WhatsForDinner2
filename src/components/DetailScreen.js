@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Modal, Text, TouchableHighlight, View, Button} from 'react-native';
-import DetailScreen from './DetailScreen';
 
-class PreviewScreen extends Component {
+class DetailScreen extends Component {
   state = {
     modalVisible: false,
   };
@@ -18,7 +17,7 @@ class PreviewScreen extends Component {
   render() {
     return (
       <View style={{marginTop: 22}}>
-        <Button title = "What's For Dinner?"
+        <Button title = "t4ed"
            onPress={() => {
              this.setModalVisible(!this.state.modalVisible);
             }}
@@ -34,7 +33,7 @@ class PreviewScreen extends Component {
           }}>
           <View style={{marginTop: 22}}>
             <View>
-              <DetailScreen/>
+
               <Text>Hello World!</Text>
               <TouchableHighlight
                 onPress={() => {
@@ -42,13 +41,6 @@ class PreviewScreen extends Component {
                 }}>
                 <Text>Hide Modal</Text>
               </TouchableHighlight>
-            </View>
-            <View>
-              <Button title = "Test"
-               onPress={() => {
-              this.setModalVisible(!this.state.modalVisible);
-              }}
-            />
             </View>
           </View>
         </Modal>
@@ -64,4 +56,4 @@ class PreviewScreen extends Component {
   }
 }
 
-export default PreviewScreen;
+export default DetailScreen;
