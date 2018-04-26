@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet,  FlatList,Modal, Text, TouchableHighlight, View, Button,Image, ActivityIndicator,AppRegistry} from 'react-native';
+import {StyleSheet, SectionList, FlatList, Modal, Text, TouchableHighlight, View, Button,Image, ActivityIndicator,AppRegistry} from 'react-native';
 
 
 class DetailScreen extends Component {
@@ -27,7 +27,7 @@ class DetailScreen extends Component {
     //let pic1 = item.pic;
     return (
       <View style={{marginTop: 22}}>
-        <Button title = "Food"
+        <Button title = "Let's See"
            onPress={() => {
              this.setModalVisible(!this.state.modalVisible);
             }}
@@ -43,7 +43,12 @@ class DetailScreen extends Component {
           }}>
           <View style={{marginTop: 22}}>
             <View>
-              <Text>{this.props.recipe.title}</Text>
+            <Text>{this.props.recipe.title}</Text>
+            <View>
+              <Text>{this.props.recipe.ingredients + "  "}</Text>
+            </View>
+              <Text>{this.props.recipe.directions}</Text>
+              <Image source = {{uri: this.props.recipe.pic}} style={{width: 200, height: 200}}/>
               <Button title = "Can I Have Seconds?"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
@@ -58,5 +63,23 @@ class DetailScreen extends Component {
     );
   }
 }
+const styles = StyleSheet.create({
+  activityIndicatorContainer:{
+      backgroundColor: "#fff",
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 1,
+  },
 
+
+  title:{
+      fontSize: 36,
+      fontWeight: "600"
+  },
+
+  description:{
+      marginTop: 5,
+      fontSize: 14,
+  }
+});
 export default DetailScreen;
