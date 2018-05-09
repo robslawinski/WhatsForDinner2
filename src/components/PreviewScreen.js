@@ -45,14 +45,14 @@ class PreviewScreen extends Component {
 			var pic1 = item.pic;
  
       return (
-        <View style={{marginTop: 22}}>
+        <View style={styles.homeButtonContainer}>
           <Button title = "What's For Dinner?"
             onPress={() => {
               this.setModalVisible(!this.state.modalVisible);
               }}
           />
 
-  
+		
           <Modal
             animationType="slide"
             transparent={false}
@@ -62,7 +62,7 @@ class PreviewScreen extends Component {
             }}>
             <View style={{marginTop: 22}}>
               <View>
-                <Button title = " Go Home"
+                <Button title = "Go Home"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}
@@ -135,6 +135,16 @@ const styles = StyleSheet.create({
       marginTop: 5,
       fontSize: 14,
   },
+  roundedButtonContainer: {
+    borderRadius: 40,
+  },
+  homeButtonContainer: {
+    padding: 100,
+    backgroundColor: 'red',
+    borderRadius: 100,
+	marginTop: 35,
+  },
+  
 });
 
 function getRandomInt(max) {
