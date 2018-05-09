@@ -137,6 +137,7 @@ const styles = StyleSheet.create({
       fontWeight: "600",
 	  marginLeft:30,
 	  marginRight: 20,
+	  color: "white",
   },
 
   description:{

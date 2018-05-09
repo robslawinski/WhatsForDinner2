@@ -42,14 +42,14 @@ class DetailScreen extends Component {
           onRequestClose={() => {
             alert('Modal has been closed.');
           }}>
-          <View style={{marginTop: 22}}>
+          <View style={{marginTop: 22, backgroundColor: '#67cbea'}}>
             <View>
-            <Text style={{fontSize: 30}}>{this.props.recipe.title}</Text>
+            <Text style={{fontSize: 30, color: "white"}}>{this.props.recipe.title}</Text>
             <View>
-              <Text style={{fontSize: 20, paddingLeft:15}}>
+              <Text style={{fontSize: 20, paddingLeft:15, color: "white"}}>
 			  {this.props.recipe.ingredients + " "}</Text>
             </View>
-              <Text style={{fontSize: 15, paddingLeft:15}}>
+              <Text style={{fontSize: 15, paddingLeft:15, color: "white"}}>
 				{this.props.recipe.directions}</Text>
               <Image source = {{uri: this.props.recipe.pic}} style={{width: 200, height: 200}}/>
               <Button title = "Back"
