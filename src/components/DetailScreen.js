@@ -26,7 +26,7 @@ class DetailScreen extends Component {
     //var item = this.props.data[1];
     //let pic1 = item.pic;
     return (
-      <View style={{marginTop: 22}}>
+      <View style={{marginTop: 22, paddingLeft:100, paddingRight: 100}}>
         <Button title = "View Recipe"
            onPress={() => {
              this.setModalVisible(!this.state.modalVisible);
@@ -45,9 +45,11 @@ class DetailScreen extends Component {
             <View>
             <Text style={{fontSize: 30}}>{this.props.recipe.title}</Text>
             <View>
-              <Text style={{fontSize: 20, paddingLeft:15}}>{this.props.recipe.ingredients.listData + " "}</Text>
+              <Text style={{fontSize: 20, paddingLeft:15}}>
+			  {this.props.recipe.ingredients + " "}</Text>
             </View>
-              <Text>{this.props.recipe.directions}</Text>
+              <Text style={{fontSize: 15, paddingLeft:15}}>
+				{this.props.recipe.directions}</Text>
               <Image source = {{uri: this.props.recipe.pic}} style={{width: 200, height: 200}}/>
               <Button title = "Back"
                 onPress={() => {
