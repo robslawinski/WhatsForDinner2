@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, SectionList, FlatList, Modal, Text, TouchableHighlight, View, Button,Image, ActivityIndicator,AppRegistry} from 'react-native';
+import {StyleSheet, SectionList, FlatList, Modal, Text, TouchableHighlight, View, Button,Image, ActivityIndicator, AppRegistry, TouchableOpacity,} from 'react-native';
 
 
 class DetailScreen extends Component {

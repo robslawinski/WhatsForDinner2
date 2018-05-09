@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Modal, Text, TextInput, TouchableHighlight, View, Button, Image, ActivityIndicator, StyleSheet } from 'react-native';
+import {Modal, Text, TextInput, TouchableHighlight, View, Button, Image, ActivityIndicator, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
 
@@ -43,7 +44,7 @@ class PreviewScreen extends Component {
       //alert( this.props.data[1].title );
 			var item = this.props.data[this.state.selectedRecipe];
 			var pic1 = item.pic;
- 
+	  
       return (
         <View style={styles.homeButtonContainer}>
           <Button title = "What's For Dinner?"
@@ -62,8 +63,8 @@ class PreviewScreen extends Component {
               // alert('Modal has been closed.');
             }}>
             <View style={{marginTop: 22}}>
-              <View>
-                <Button title = "Go Home"
+              <View style={{paddingLeft:110, paddingRight: 110, paddingBottom:20}}>
+                <Button title = " Home"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}
@@ -76,7 +77,7 @@ class PreviewScreen extends Component {
                 <Image source = {{uri: pic1}} style={{width: 400, height: 400}}/>
                 <DetailScreen recipe={item}/>
               </View>
-              <View>
+              <View style={{paddingLeft:100, paddingRight: 100, paddingTop: 20}}>
                 <Button title = "Another Recipe"
                 onPress={() => {
                   //this.state.selectedRecipe = 2;
@@ -123,10 +124,11 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       flex: 1,
   },
-  
-	button: {
-	},
-
+   button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10
+  },
   title:{
       fontSize: 36,
       fontWeight: "600",
