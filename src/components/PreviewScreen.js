@@ -36,7 +36,7 @@ class PreviewScreen extends Component {
   render() {
     if (this.props.loading) {
       return (
-          <View style={styles.activityIndicatorContainer}>
+          <View>
               <ActivityIndicator animating={true}/>
           </View>
       );
@@ -46,6 +46,7 @@ class PreviewScreen extends Component {
 			var pic1 = item.pic;
 	  
       return (
+	  
         <View style={styles.homeButtonContainer}>
           <Button title = "What's For Dinner?"
 		  	color="orange"
@@ -62,9 +63,10 @@ class PreviewScreen extends Component {
             onRequestClose={() => {
               // alert('Modal has been closed.');
             }}>
-            <View style={{marginTop: 22}}>
+			<View style={styles.activityIndicatorContainer}>
               <View style={{paddingLeft:110, paddingRight: 110, paddingBottom:20}}>
-                <Button title = " Home"
+                <Button title = "Home"
+				color="orange"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}
@@ -79,6 +81,7 @@ class PreviewScreen extends Component {
               </View>
               <View style={{paddingLeft:100, paddingRight: 100, paddingTop: 20}}>
                 <Button title = "Another Recipe"
+				color="orange"
                 onPress={() => {
                   //this.state.selectedRecipe = 2;
                   this.setState({ selectedRecipe: getRandomInt(this.props.data.length )});
@@ -89,7 +92,7 @@ class PreviewScreen extends Component {
           </Modal>
                 
 
-        </View>
+		</View>
       );
     }
   }
@@ -119,7 +122,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(PreviewScreen);
 
 const styles = StyleSheet.create({
   activityIndicatorContainer:{
-      backgroundColor: "#fff",
+      backgroundColor: '#67cbea',
       alignItems: 'center',
       justifyContent: 'center',
       flex: 1,
@@ -132,6 +135,8 @@ const styles = StyleSheet.create({
   title:{
       fontSize: 36,
       fontWeight: "600",
+	  marginLeft:30,
+	  marginRight: 20,
   },
 
   description:{
@@ -147,7 +152,6 @@ const styles = StyleSheet.create({
 	paddingRight: 40,
     backgroundColor: 'orange',
     borderRadius: 120,
-	marginTop: 35,
   },
   
 });

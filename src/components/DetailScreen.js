@@ -28,6 +28,7 @@ class DetailScreen extends Component {
     return (
       <View style={{marginTop: 22, paddingLeft:100, paddingRight: 100}}>
         <Button title = "View Recipe"
+			color="orange"
            onPress={() => {
              this.setModalVisible(!this.state.modalVisible);
             }}
