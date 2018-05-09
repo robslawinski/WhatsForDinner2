@@ -66,7 +66,7 @@ class DetailScreen extends Component {
 const styles = StyleSheet.create({
   activityIndicatorContainer:{
       flex: 1,
-      backgroundColor: '#2964E3',
+      backgroundColor: '#67cbea',
       alignItems: 'center',
       justifyContent: 'center',
     },

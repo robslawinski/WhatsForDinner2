@@ -140,9 +140,12 @@ const styles = StyleSheet.create({
   },
   homeButtonContainer: {
     padding: 100,
-    backgroundColor: 'red',
-    borderRadius: 100,
+	paddingLeft: 40,
+	paddingRight: 40,
+    backgroundColor: 'orange',
+    borderRadius: 120,
 	marginTop: 35,
+	borderColor: #f27e26,
   },
   
 });
