@@ -62,6 +62,13 @@ class PreviewScreen extends Component {
             }}>
             <View style={{marginTop: 22}}>
               <View>
+                <Button title = " Go Home"
+                onPress={() => {
+                  this.setModalVisible(!this.state.modalVisible);
+                }}
+              />
+			  </View>
+			  <View>
                 <Text style={styles.title}>
                     {item.title}          
                 </Text>
@@ -69,7 +76,7 @@ class PreviewScreen extends Component {
                 <DetailScreen recipe={item}/>
               </View>
               <View>
-                <Button title = "Lemme Try Something Else"
+                <Button title = "Another Recipe"
                 onPress={() => {
                   //this.state.selectedRecipe = 2;
                   this.setState({ selectedRecipe: getRandomInt(this.props.data.length )});
@@ -115,17 +122,19 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       flex: 1,
   },
-
+  
+	button: {
+	},
 
   title:{
       fontSize: 36,
-      fontWeight: "600"
+      fontWeight: "600",
   },
 
   description:{
       marginTop: 5,
       fontSize: 14,
-  }
+  },
 });
 
 function getRandomInt(max) {

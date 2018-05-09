@@ -27,7 +27,7 @@ class DetailScreen extends Component {
     //let pic1 = item.pic;
     return (
       <View style={{marginTop: 22}}>
-        <Button title = "Let's See"
+        <Button title = "View Recipe"
            onPress={() => {
              this.setModalVisible(!this.state.modalVisible);
             }}
@@ -49,7 +49,7 @@ class DetailScreen extends Component {
             </View>
               <Text>{this.props.recipe.directions}</Text>
               <Image source = {{uri: this.props.recipe.pic}} style={{width: 200, height: 200}}/>
-              <Button title = "Can I Have Seconds?"
+              <Button title = "Back"
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
@@ -65,16 +65,15 @@ class DetailScreen extends Component {
 }
 const styles = StyleSheet.create({
   activityIndicatorContainer:{
-      backgroundColor: "#fff",
+      flex: 1,
+      backgroundColor: '#2964E3',
       alignItems: 'center',
       justifyContent: 'center',
-      flex: 1,
-  },
-
+    },
 
   title:{
       fontSize: 36,
-      fontWeight: "600"
+      fontWeight: "600",
   },
 
   description:{
