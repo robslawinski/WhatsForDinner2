@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View, Button, Image, ActivityIndicator, StyleSheet } from 'react-native';
+import {Modal, Text, TextInput, TouchableHighlight, View, Button, Image, ActivityIndicator, StyleSheet } from 'react-native';
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
 
@@ -47,6 +47,7 @@ class PreviewScreen extends Component {
       return (
         <View style={styles.homeButtonContainer}>
           <Button title = "What's For Dinner?"
+		  	color="orange"
             onPress={() => {
               this.setModalVisible(!this.state.modalVisible);
               }}
@@ -145,7 +146,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
     borderRadius: 120,
 	marginTop: 35,
-	borderColor: #f27e26,
   },
   
 });

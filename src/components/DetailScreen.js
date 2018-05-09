@@ -43,9 +43,9 @@ class DetailScreen extends Component {
           }}>
           <View style={{marginTop: 22}}>
             <View>
-            <Text>{this.props.recipe.title}</Text>
+            <Text style={{fontSize: 30}}>{this.props.recipe.title}</Text>
             <View>
-              <Text>{this.props.recipe.ingredients + "  "}</Text>
+              <Text style={{fontSize: 20, paddingLeft:15}}>{this.props.recipe.ingredients.listData + " "}</Text>
             </View>
               <Text>{this.props.recipe.directions}</Text>
               <Image source = {{uri: this.props.recipe.pic}} style={{width: 200, height: 200}}/>
@@ -66,7 +66,7 @@ class DetailScreen extends Component {
 const styles = StyleSheet.create({
   activityIndicatorContainer:{
       flex: 1,
-      backgroundColor: '#67cbea',
+      backgroundColor: '#2964E3',
       alignItems: 'center',
       justifyContent: 'center',
     },
